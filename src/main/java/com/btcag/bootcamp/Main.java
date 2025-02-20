@@ -25,6 +25,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ObjectMapper objectMapper = new ObjectMapper();
 
+
+
+
+
         int toDo = 0;
         while (toDo != 5) {
             toDo = InputService.getActionInput(scanner);
@@ -61,12 +65,13 @@ public class Main {
             os.write(input, 0, input.length);
         }
 
-        // Get the response from the server
+
         int statusCode = connection.getResponseCode();
         System.out.println("Response Code: " + statusCode);
 
         PostService.postRobot(robot2Post);
-
+//test test
+        //test test
 
     }
 }

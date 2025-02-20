@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
-        <property name="hibernate.connection.url">jdbc:sqlite:C:/Users/Bho/Desktop/WebViewForRobots/src/main/resources/RobotWars.db</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:C:\Users\LUKRUEGE\IdeaProjects\LocalHostServerRobot-main\src\main\resources\RobotWars.db</property>
         <property name="hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
         <property name="hibernate.hbm2ddl.auto">create-drop</property> <!-- Use update for automatic schema changes -->
         <property name="hibernate.show_sql">false</property> <!-- Corrected to false -->
