@@ -47,7 +47,7 @@ public class QueueService {
 
     @GetMapping
     public String sayHello(){
-        return "Henlo Frens";
+        return "Hello World";
     }
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public void addToList(@RequestBody Robot r){

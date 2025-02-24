@@ -16,7 +16,7 @@ public class InputService {
         name = scanner.nextLine();
         for (int i = 0; i < 15; i++) {
             do {
-                System.out.println("Geben sie an welchen Stat sie erhöhen wollen. Sie haben noch " + (15 - i) + " übrig.");
+                System.out.println("Geben sie an welches Attribut sie erhöhen wollen. Sie haben noch " + (15 - i) + " Punkte übrig.");
                 System.out.println("(1) Leben: " + health);
                 System.out.println("(2) Schaden: " + attackDamage);
                 System.out.println("(3) Reichweite: " + attackRange);

@@ -34,7 +34,6 @@ public class Main {
             toDo = InputService.getActionInput(scanner);
             scanner.nextLine();
             switch (toDo) {
-                //Roboter erstellen
                 case 1:
                     Robot robot2Post = InputService.getStatsForRobot(scanner);
                     postRobot(objectMapper, robot2Post);
@@ -52,26 +51,19 @@ public class Main {
 
     private static void postRobot(ObjectMapper objectMapper, Robot robot2Post) throws IOException {
         String json = objectMapper.writeValueAsString(robot2Post);
-        // Send the POST request with the Robot object as JSON
-        URL url = new URL("http://localhost:8080/queue");  // Change to your server's URL
+        URL url = new URL("http://localhost:8080/queue");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
         connection.setDoOutput(true);
         connection.setRequestProperty("Content-Type", "application/json");
 
-        // Write the JSON data to the request body
         try (OutputStream os = connection.getOutputStream()) {
             byte[] input = json.getBytes("utf-8");
             os.write(input, 0, input.length);
         }
 
-
         int statusCode = connection.getResponseCode();
         System.out.println("Response Code: " + statusCode);
-
         PostService.postRobot(robot2Post);
-//test test
-        //test test
-
     }
 }
